@@ -1,0 +1,42 @@
+<div class="gallery__frame" data-ng-class="{'gallery__frame--visible' : open} ">
+    
+    <div class="row ">
+        <div class="col-xs-10">
+            <h1 class="gallery__title"> {{galleryTitle}} </h1>
+        </div>
+        <div class="col-xs-2 clearfix ">
+            <a class="pull-right gallery__close-link" data-ng-click="open=false">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="row gallery__contents">
+        <div class="col-sm-10 col-md-9 gallery__mainimg__holder">
+            <div class="gallery__mainimg" style="background-image:url('{{galleryMainImg}}');" data-ng-swipe-right="prevImage(null, 'from-left')"  data-ng-swipe-left="nextImage(null, 'from-right')">
+
+            </div>
+            <div class="clearfix visible-xs">
+                <a class="pull-left gallery__nav-link" data-ng-click="prevImage(null, 'from-left')">
+                    <i class="fa fa-arrow-left"></i>
+                </a>            
+                <a class="pull-right gallery__nav-link" data-ng-click="nextImage(null, 'from-right')">
+                    <i class="fa fa-arrow-right"></i>
+                </a>            
+            </div>
+            <div class="gallery__mainimg__title text-center"  >
+                {{galleryMainImgTitle}}
+            </div>
+        </div>
+        <div class="col-sm-2 col-md-3 gallery__thumb-list">
+            <ul>
+                <li data-ng-repeat="image in galleryImages">
+                    <a data-ng-click="selectImage($index)">
+                        <img data-ng-src="{{image.url}}" alt="{{image.title}}" data-ng-class="{'active':(selectedImg===$index)}" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>

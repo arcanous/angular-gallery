@@ -1,0 +1,197 @@
+
+
+.gallery__frame {
+    width:                      100%;
+    height:                     100%;
+    position:                   fixed;
+    top:                        0;
+    left:                       0;
+    z-index:                    2000;
+    background:                 rgba(0,0,0,0.9);
+    opacity:                    0;    
+    overflow-y:                 hidden;
+    overflow-x:                 hidden;
+
+        transition-duration:    0.5s;
+-webkit-transition-duration:    0.5s;
+        transition-property:    all;
+-webkit-transition-property:    all;
+          -webkit-transform:    scale(0);
+              -ms-transform:    scale(0); // IE9+
+                  transform:    scale(0);
+
+
+}
+
+.gallery__frame--visible {
+  -webkit-transform:        scale(1);
+      -ms-transform:        scale(1); // IE9+
+          transform:        scale(1);
+            opacity:        1;
+}
+
+.ie8 .gallery__frame {
+    background-color:   #000;
+    display:    none;
+}
+
+.ie8 .gallery__frame--visible {
+    display: block;
+}
+
+
+.gallery__title {
+    margin:         10px 0 0 25px;    
+    color:          #777;
+}
+.gallery__close-link, .gallery__nav-link {
+    color:          #fff;    
+    font-size:      25px;
+    cursor:         pointer;
+    margin-top:     15px;
+    margin-right:   20px;
+}
+
+.gallery__nav-link {
+    font-size:      25px;
+    margin-top:     8px;
+    margin-bottom:  8px;
+    margin-right:   30px;
+    margin-left:    30px;
+}
+
+.gallery__thumb-list {
+    overflow:       hidden;
+    padding-left:   0;
+
+
+}
+
+.gallery__thumb-list ul {
+    margin:         0;
+    float:          left;
+        
+
+
+}
+
+.gallery__thumb-list ul li {
+            
+    margin-left:    0;
+    padding-right:  20px;
+    margin-bottom:  20px;
+    max-width:      200px;
+    list-style:     none;
+
+
+}
+
+.gallery__thumb-list ul li a {
+    cursor:         pointer;
+
+
+}
+
+.gallery__thumb-list ul li a img {
+    border:         1px solid #333;
+    padding:        3px;
+    width:          100%;
+    min-width:      60px;
+}
+
+.gallery__thumb-list ul li a img.active {
+    border-color:   #ccc;
+    box-shadow:     0 0 5px 5px rgba(255,255,255,0.2);
+}
+
+
+.gallery__contents {
+    height:        100%;
+
+}
+
+.gallery__mainimg__holder {
+    height:         100%;
+    padding-right: 0; 
+}
+
+.gallery__mainimg {
+    height:       80%;
+    background-repeat:      no-repeat;
+    background-position:    center center;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0); // IE9+
+          transform: scale(0);
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0); // IE9+
+          transform: translate(0, 0);
+
+            transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+            transition-property: all;
+    -webkit-transition-property: all;    
+}
+
+
+
+@media screen and (max-width: 991px) {
+      .gallery__mainimg {
+        height:             70%;
+        background-size:    contain;
+      }
+}
+
+
+
+.gallery__mainimg--shrinked {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0); // IE9+
+          transform: scale(0);
+}
+
+.gallery__mainimg--fromleft {
+  -webkit-transform: translate(-150%, 0);
+      -ms-transform: translate(-150%, 0); // IE9+
+          transform: translate(-150%, 0);
+}
+.gallery__mainimg--fromright {
+  -webkit-transform: translate(150%, 0);
+      -ms-transform: translate(150%, 0); // IE9+
+          transform: translate(150%, 0);
+}
+.gallery__mainimg--fromtop {
+   -webkit-transform: translate(0, -150%);
+      -ms-transform: translate(0, -150%); // IE9+
+          transform: translate(0, -150%);
+}
+.gallery__mainimg--frombottom {
+   -webkit-transform: translate(0, 150%);
+      -ms-transform: translate(0, 150%); // IE9+
+          transform: translate(0, 150%);
+}
+
+
+
+.gallery__mainimg__title {
+    color:          #fff;  
+    font-family:    'Open Sans', Arial, Helvetica, sans-serif;
+    font-size:      15px;
+    margin-top:     0;
+    padding:        0 30px;
+
+}
+.gallery__imagecount {
+    color:          #777;
+}
+
+.scrollbar-hidden {
+    overflow-y:   hidden;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+

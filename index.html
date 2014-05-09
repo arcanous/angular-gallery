@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html data-ng-app="galleryApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html data-ng-app="galleryApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html data-ng-app="galleryApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html data-ng-app="galleryApp" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Angular gallery</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="/src/angular-gallery.css">
+
+    </head>
+    <body>
+
+
+    <div class="container">
+      
+
+      <div class="row">
+          
+          <div class="col-sm-8">
+              <h1> Angular gallery </h1>  
+
+
+          </div>
+
+          <div class="col-sm-4">
+            
+
+              <a href="#" data-ng-click="galleryOpen = true" >
+                  <img src="http://lorempixel.com/400/200/nightlife/" alt="Gallery" class="img-thumbnail">
+              </a>
+
+              <a class="pull-right" href="#" data-ng-click="galleryOpen = true"><i class="fa fa-picture-o"></i> View gallery </a>  
+
+
+          <gallery 
+              open="galleryOpen"
+              gallery-title="Angular gallery example"
+              gallery-images="[
+                  {'url':'http://lorempixel.com/1000/1000/nightlife/1/', 'title': 'Image' },
+                  {'url':'http://lorempixel.com/1000/1000/nightlife/2/', 'title': 'Image' },
+                  {'url':'http://lorempixel.com/1000/1000/nightlife/3/', 'title': 'Image' },
+                  {'url':'http://lorempixel.com/1000/1000/nightlife/4/', 'title': 'Image' },
+                  {'url':'http://lorempixel.com/1000/1000/nightlife/5/', 'title': 'Image' },
+                  {'url':'http://lorempixel.com/1000/1000/nightlife/6/', 'title': 'Image' },
+                  {'url':'http://lorempixel.com/1000/1000/nightlife/7/', 'title': 'Image' },
+                  {'url':'http://lorempixel.com/1000/1000/nightlife/8/', 'title': 'Image' },
+                  {'url':'http://lorempixel.com/1000/1000/nightlife/9/', 'title': 'Image' },
+                  {'url':'http://lorempixel.com/1000/1000/nightlife/10/', 'title': 'Image' }
+              ]"
+              selected-image="selectedImage"
+              >
+          </gallery>
+
+
+
+
+          </div>
+
+
+
+      </div>
+
+
+
+        
+
+    </div>
+
+
+
+      
+
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-touch.min.js"></script>
+      <script src="/src/angular-gallery.js"></script>
+
+    </body>
+</html>
