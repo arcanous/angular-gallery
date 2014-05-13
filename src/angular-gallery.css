@@ -149,39 +149,20 @@
           transform: scale(0);
 }
 
-.gallery__mainimg--fromleft {
-  -webkit-transform: translate(-150%, 0);
-      -ms-transform: translate(-150%, 0); // IE9+
-          transform: translate(-150%, 0);
-}
-.gallery__mainimg--fromright {
-  -webkit-transform: translate(150%, 0);
-      -ms-transform: translate(150%, 0); // IE9+
-          transform: translate(150%, 0);
-}
-.gallery__mainimg--fromtop {
-   -webkit-transform: translate(0, -150%);
-      -ms-transform: translate(0, -150%); // IE9+
-          transform: translate(0, -150%);
-}
-.gallery__mainimg--frombottom {
-   -webkit-transform: translate(0, 150%);
-      -ms-transform: translate(0, 150%); // IE9+
-          transform: translate(0, 150%);
-}
-
-
-
 .gallery__mainimg__title {
-    color:          #fff;  
-    font-family:    'Open Sans', Arial, Helvetica, sans-serif;
-    font-size:      15px;
-    margin-top:     0;
-    padding:        0 30px;
+    color:              #fff;  
+    font-family:        'Open Sans', Arial, Helvetica, sans-serif;
+    font-size:          15px;
+    margin-top:         0;
+    padding-top:        15px;
+    padding-left:       30px;
+    padding-right:      30px;
+    padding-bottom:     15px;
+    overflow:           hidden;
 
 }
 .gallery__imagecount {
-    color:          #777;
+    color:          #555;
 }
 
 .scrollbar-hidden {
