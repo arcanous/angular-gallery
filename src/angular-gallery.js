@@ -16,25 +16,7 @@ angular.module('galleryApp').directive('gallery',
                 $scope.selectImage = function (idx, isScroll, animDirection) {
 
                     
-                    var animClass = 'gallery__mainimg--shrinked',
-                        animClassDelay = 0;
-
-                    if (animDirection === 'from-left') {
-                        animClass = 'gallery__mainimg--fromleft';
-                        animClassDelay = 100;
-                    }
-                    if (animDirection === 'from-right') {
-                        animClass = 'gallery__mainimg--fromright';
-                        animClassDelay = 100;
-                    }
-                    if (animDirection === 'from-top') {
-                        animClass = 'gallery__mainimg--fromtop';
-                        animClassDelay = 100;
-                    }
-                    if (animDirection === 'from-bottom') {
-                        animClass = 'gallery__mainimg--frombottom';
-                        animClassDelay = 100;
-                    }
+                    var animClass = 'gallery__mainimg--shrinked';
 
                     angular.element('.gallery__mainimg').addClass(animClass);
 
@@ -51,15 +33,9 @@ angular.module('galleryApp').directive('gallery',
                         });
                     }
 
-                    if (animClassDelay === 0) {
-                        angular.element('.gallery__mainimg').removeClass(animClass);
-                    } else {
-                        $timeout(function () {
-                            angular.element('.gallery__mainimg').removeClass(animClass);
-                        }, animClassDelay);
-                    }
-                    
-                    
+
+                    angular.element('.gallery__mainimg').removeClass(animClass);
+                   
 
 
                 };
@@ -183,21 +159,12 @@ angular.module('galleryApp').directive('gallery',
                 scope.galleryTitle = attrs.galleryTitle;
                 
                 /*
-                var start, end;
+                var $bgimagecache = $('<div id="bgimagecache"></div>').appendTo('body');
 
-                $swipe.bind(angular.element('.gallery__mainimg__holder'), {
-                    'start' : function (e) {
+                angular.forEach(scope.galleryImages, function (image) {
 
-                        start = e;
+                    $('<p style="height: 50px; background-image: url(\'' + image.url + '\')"></p>').appendTo($bgimagecache);
 
-                    },
-                    'move' : function (e) {
-
-                        end = e;
-
-                        console.log(start, end);
-
-                    }
                 });
                 */
                 
